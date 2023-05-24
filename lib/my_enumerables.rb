@@ -74,4 +74,23 @@ class Array
     return none
   end
 
+  def my_count
+    i = 0
+    matchingElements = 0
+    if block_given?
+      while i < self.length
+        if yield(self[i])
+          matchingElements += 1
+        end
+        i += 1
+      end
+    else
+      while matchingElements < self.length
+        matchingElements += 1
+      end
+    end
+
+    return matchingElements
+  end
+
 end
