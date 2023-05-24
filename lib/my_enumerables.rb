@@ -37,4 +37,7 @@ class Array
     end
     return newArray
   end
+
+  def my_all?
+  end
 end
