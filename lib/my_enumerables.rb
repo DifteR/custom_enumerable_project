@@ -61,4 +61,17 @@ class Array
     end
     return failed
   end
+
+  def my_none?
+    i = 0
+    none = true
+    while i < self.length
+      if yield(self[i])
+        none = false
+      end
+      i += 1
+    end
+    return none
+  end
+
 end
