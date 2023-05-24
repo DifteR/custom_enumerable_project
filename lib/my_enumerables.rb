@@ -93,4 +93,14 @@ class Array
     return matchingElements
   end
 
+  def my_map()
+    i = 0
+    newArray = Array.new()
+    while i < self.length
+      newArray << yield(self[i])
+      i += 1
+    end
+    return newArray
+  end
+
 end
