@@ -25,4 +25,16 @@ class Array
     end
     return self
   end
+
+  def my_select()
+    newArray = Array.new()
+    i = 0
+    while i < self.length
+      if yield(self[i]) == true
+        newArray << self[i]
+      end
+    i += 1
+    end
+    return newArray
+  end
 end
