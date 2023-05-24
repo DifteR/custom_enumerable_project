@@ -49,4 +49,16 @@ class Array
     end
     return passed
   end
+
+  def my_any?
+    i = 0
+    failed = false
+    while i < self.length
+      if yield(self[i])
+        failed = true
+      end
+      i += 1
+    end
+    return failed
+  end
 end
